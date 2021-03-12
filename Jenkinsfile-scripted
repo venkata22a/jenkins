@@ -1,4 +1,4 @@
-def sg = ''
+def sg
 node {
 
 stage("build"){
