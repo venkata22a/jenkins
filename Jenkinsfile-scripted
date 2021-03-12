@@ -1,19 +1,13 @@
-def sg
+
 node {
 
-stage('checkout'){
-        git url: 'https://github.com/venkata22a/jenkins.git'
-}
 stage("build"){
- echo "build stage2"
+ echo "build stage"
 }
-stage("test"){
- sg = load 'test.groovy'
- 
+stage("test"){ 
  echo "test stage"
 }
 stage("deploy"){
- sg.example2()
  echo "deploy stage"
 }
 stage("validate"){
