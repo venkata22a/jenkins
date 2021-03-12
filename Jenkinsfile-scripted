@@ -5,7 +5,7 @@ stage("build"){
  echo "build stage2"
 }
 stage("test"){
- sg = load 'file.groovy'
+ sg = load 'test.groovy'
  sg.example2()
  echo "test stage"
 }
