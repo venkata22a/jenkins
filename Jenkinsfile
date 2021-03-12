@@ -11,15 +11,18 @@ pipeline{
     }
    
   stage('Load') {
+   steps {
      script{
       sg = load 'test.groovy'
      }
    }
+   }
     stage("test"){
-     script{
+     
+     steps{
+      script{
       sg.example1()
      }
-     steps{
       echo "test stage"
       }
     }
