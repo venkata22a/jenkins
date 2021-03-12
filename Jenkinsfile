@@ -8,8 +8,13 @@ pipeline{
       echo "build stage2"
       }
     }
+    stage('Load') {
+    code = load 'test.groovy'
+    }
     stage("test"){
+     code.example1()
       steps{
+      
       echo "test stage"
       }
     }
