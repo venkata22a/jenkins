@@ -1,9 +1,12 @@
+def sg = ''
 node {
 
 stage("build"){
  echo "build stage2"
 }
 stage("test"){
+ sg = load 'file.groovy'
+ sg.example2()
  echo "test stage"
 }
 stage("deploy"){
