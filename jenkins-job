@@ -1,0 +1,20 @@
+job('demo') {
+    steps {
+        shell('echo Hello World!')
+    }
+}
+
+pipelineJob('pipeline-demo') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        github('venkata22a/jenkins')
+                    }
+                }
+            }
+            scriptPath('Jenkinsfile')
+        }
+    }
+}
